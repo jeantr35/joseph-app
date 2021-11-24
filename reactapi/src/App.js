@@ -11,7 +11,6 @@ function App() {
     "zAngle": 0.0
 }
   const [angle, setAngle] = useState(INITIALANGLE)
-  const [toggler, setToggler] = useState(false)
 
   const fetchApi = async () => {
     fetch(url).then(res => res.json())
@@ -28,10 +27,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Joseph App Dev</h1>
-      <p>Angulo x {angle.xAngle}</p>
-      <p>Angulo Y {angle.yAngle}</p>
-      <p>Angulo Z {angle.zAngle}</p>
+      <h1>Aplicacion analizador y corrector de postura</h1>
+      <p>Angulo cervical {angle.xAngle}</p>
+      {angle.badCervical ? <p>Mala postura en el cervical!</p> : <p>Ok</p>}
+      <p>Angulo toraxica {angle.yAngle}</p>
+      {angle.badToraxica ? <p>Mala postura en la toraxica!</p> : <p>Ok</p>}
+      <p>Angulo lumbar {angle.zAngle}</p>
+      {angle.badLumbar ? <p>Mala postura en la lumbar!</p> : <p>Ok</p>}
     </div>
   );
 }
