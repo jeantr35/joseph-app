@@ -28,11 +28,11 @@ function App() {
   return (
     <div className="App">
       <h1>Aplicacion analizador y corrector de postura</h1>
-      <p>Angulo cervical {angle.xAngle}</p>
+      <p>Angulo cervical: {angle.xAngle}</p>
       {angle.badCervical ? <p>Mala postura en el cervical!</p> : <p>Ok</p>}
-      <p>Angulo toraxica {angle.yAngle}</p>
+      <p>Angulo toraxica: {angle.yAngle}</p>
       {angle.badToraxica ? <p>Mala postura en la toraxica!</p> : <p>Ok</p>}
-      <p>Angulo lumbar {angle.zAngle}</p>
+      <p>Angulo lumbar: {angle.zAngle}</p>
       {angle.badLumbar ? <p>Mala postura en la lumbar!</p> : <p>Ok</p>}
     </div>
   );
